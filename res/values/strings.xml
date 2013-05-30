@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DevHelper</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string-array name="main_items" translated="false">
+        <item>画布相关</item>
+        <item>打开RTSP地址</item>
+        <item>获取系统信息</item>
+        <item>资源使用路径判断</item>
+        <item>正确显示竖屏图片</item>
+        <item>常用组件美化</item>
+        <item>USB-HOST</item>
+        <item>Phone相关</item>
+        <item>设置标题栏</item>
+        <item>图片截取</item>
+        <item>照相测试</item>
+        <item>监听网络变化</item>
+    </string-array>
+
+    <string name="resource_dir">no sw dp</string>
+    <string name="phone_play">play music</string>
+
+</resources>
