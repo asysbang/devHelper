@@ -6,12 +6,40 @@
         android:id="@+id/camera_preview"
         android:layout_width="640dip"
         android:layout_height="480dip"
-        android:layout_centerInParent="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dip" />
+
+    <ImageView
+        android:id="@+id/camera_image"
+        android:layout_width="640dip"
+        android:layout_height="480dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dip"
+        android:visibility="gone" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/camera_preview"
+        android:layout_margin="30dip"
+        android:onClick="save"
+        android:text="@string/camera_save" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" android:onClick="switchCamera"/>
+        android:layout_centerHorizontal="true"
+        android:onClick="switchCamera" />
+
+    <ImageView
+        android:id="@+id/camera_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_launcher" />
 
 </RelativeLayout>

@@ -22,5 +22,6 @@
 
     <string name="resource_dir">no sw dp</string>
     <string name="phone_play">play music</string>
+    <string name="camera_save">Save</string>
 
 </resources>
