@@ -21,6 +21,7 @@ import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationSet;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.PopupWindow;
 
@@ -33,6 +34,8 @@ public class CameraActivity extends Activity implements Callback, AnimationListe
 	private Camera mCamera;
 
 	private ImageView image, tag;
+	
+	private Button save;
 
 	private AnimationSet as;
 	private TranslateAnimation ta;
@@ -50,16 +53,7 @@ public class CameraActivity extends Activity implements Callback, AnimationListe
 		mSurfaceHolder.addCallback(this);
 		image = (ImageView) findViewById(R.id.camera_image);
 		tag = (ImageView) findViewById(R.id.camera_tag);
-		as = new AnimationSet(false);
-
-		sa = new ScaleAnimation(1.0f, 0.12f, 1.0f, 0.12f);
-		sa.setDuration(1000);
-		as.addAnimation(sa);
-
-		ta = new TranslateAnimation(0, 1000, 0, 333);
-		ta.setDuration(1000);
-		as.addAnimation(ta);
-		as.setAnimationListener(this);
+		save =(Button) findViewById(R.id.camera_save);
 	}
 
 	private PictureCallback jpeg = new PictureCallback() {
@@ -83,6 +77,20 @@ public class CameraActivity extends Activity implements Callback, AnimationListe
 	@Override
 	public void surfaceCreated(SurfaceHolder arg0) {
 		try {
+			
+			System.out.println("====tag.getX=========="+tag.getX());
+			as = new AnimationSet(false);
+
+			sa = new ScaleAnimation(1.0f, 0.12f, 1.0f, 0.12f);
+			sa.setDuration(1000);
+			as.addAnimation(sa);
+
+			ta = new TranslateAnimation(0, tag.getX(), 0, tag.getY());
+			ta.setDuration(1000);
+			as.addAnimation(ta);
+			as.setAnimationListener(this);
+			
+			
 			mCamera = Camera.open(cameraId);
 			mCamera.setPreviewDisplay(mSurfaceHolder);
 			int degrees = getDisplayOritation(getDispalyRotation(), cameraId);
@@ -171,6 +179,7 @@ public class CameraActivity extends Activity implements Callback, AnimationListe
 			return;
 		}
 		isAnimating = true;
+		save.setEnabled(false);
 		mCamera.takePicture(null, null, jpeg);
 
 	}
@@ -183,6 +192,7 @@ public class CameraActivity extends Activity implements Callback, AnimationListe
 	public void onAnimationEnd(Animation animation) {
 		image.setVisibility(View.GONE);
 		isAnimating = false;
+		save.setEnabled(true);
 	}
 
 	@Override
