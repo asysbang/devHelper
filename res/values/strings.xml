@@ -18,6 +18,7 @@
         <item>图片截取</item>
         <item>照相测试</item>
         <item>监听网络变化</item>
+        <item>刷新list上的进度条</item>
     </string-array>
 
     <string name="resource_dir">no sw dp</string>
