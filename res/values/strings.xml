@@ -20,6 +20,7 @@
         <item>监听网络变化</item>
         <item>刷新list上的进度条</item>
         <item>添加通话记录</item>
+        <item>带索引的listview</item>
     </string-array>
 
     <string name="resource_dir">no sw dp</string>

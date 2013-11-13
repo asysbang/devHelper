@@ -41,6 +41,7 @@
         <activity android:name="CameraActivity" />
         <activity android:name="ListViewDemo" />
         <activity android:name="CallLogActivity" />
+        <activity android:name="IndexedListViewActivity" />
 
         <receiver android:name="NetworkStateReceiver" >
             <intent-filter>
