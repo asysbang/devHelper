@@ -26,6 +26,7 @@ public class MainActivity extends Activity implements OnItemClickListener {
 	private static final int ITEM_CAMERA = 10;
 	private static final int ITEM_NETWORK = 11;
 	private static final int ITEM_LIST_SEEK = 12;
+	private static final int ITEM_CALL_LOG = 13;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +79,9 @@ public class MainActivity extends Activity implements OnItemClickListener {
 			break;
 		case ITEM_LIST_SEEK:
 			startActivity(new Intent(this, ListViewDemo.class));
+			break;
+		case ITEM_CALL_LOG:
+			startActivity(new Intent(this, CallLogActivity.class));
 			break;
 		default:
 			break;

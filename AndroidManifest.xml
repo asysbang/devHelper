@@ -11,6 +11,10 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
 
     <application
         android:icon="@drawable/ic_launcher"
@@ -36,6 +40,7 @@
         <activity android:name="ImageCropActivity" />
         <activity android:name="CameraActivity" />
         <activity android:name="ListViewDemo" />
+        <activity android:name="CallLogActivity" />
 
         <receiver android:name="NetworkStateReceiver" >
             <intent-filter>

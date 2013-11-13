@@ -19,10 +19,13 @@
         <item>照相测试</item>
         <item>监听网络变化</item>
         <item>刷新list上的进度条</item>
+        <item>添加通话记录</item>
     </string-array>
 
     <string name="resource_dir">no sw dp</string>
     <string name="phone_play">play music</string>
     <string name="camera_save">Save</string>
+    <string name="call_log_add">添加</string>
+    
 
 </resources>
